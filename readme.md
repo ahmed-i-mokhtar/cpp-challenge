@@ -34,7 +34,7 @@ Ensure you have the following installed:
 
 Usage: ./csv_processor <input_file> <output_file>
     
-    ./csv_processor
+    ./csv_processor ../input/test1.csv ../output/test1.csv
     
 
 
