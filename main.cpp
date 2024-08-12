@@ -1,10 +1,16 @@
 #include "solution.h"
 
-int main() {
-    // File paths
-    std::string inputFilename = "/Users/ahmed.mokhtar/Documents/NavViz/C++ Challenge/input/test1.csv";
-    std::string outputFilename = "/Users/ahmed.mokhtar/Documents/NavViz/C++ Challenge/output/test1.csv";
 
+int main(int argc, char* argv[]) {
+    // Check if the correct number of arguments are provided
+    if (argc != 3) {
+        std::cerr << "Usage: " << argv[0] << " <input_file> <output_file>" << std::endl;
+        return 1;
+    }
+
+    // File paths from command-line arguments
+    std::string inputFilename = argv[1];
+    std::string outputFilename = argv[2];
     // Read the data from the input CSV file (can be int or double)
     auto data = readCSV<double>(inputFilename);
 

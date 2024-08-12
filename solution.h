@@ -5,6 +5,8 @@
 #include <string>
 #include <iomanip>
 
+char delim; // Use the same delim of the input in the output
+
 // A function to read the CSV file and store the data in a 2D vector
 template <typename T>
 std::vector<std::vector<T>> readCSV(const std::string& filename) {
@@ -16,7 +18,6 @@ std::vector<std::vector<T>> readCSV(const std::string& filename) {
         std::vector<T> row;
         std::istringstream ss(line);
         T value;
-        char delim;
 
         while (ss >> value) {
             row.push_back(value);
@@ -79,7 +80,7 @@ void writeCSV(const std::string& filename, const std::vector<std::vector<T>>& da
         for (size_t i = 0; i < row.size(); ++i) {
             file << std::fixed << std::setprecision(4) << row[i];
             if (i < row.size() - 1) {
-                file << ",";
+                file << delim;
             }
         }
         file << "\n";
