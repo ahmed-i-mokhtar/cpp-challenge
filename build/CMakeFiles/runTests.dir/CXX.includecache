@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ahmed.mokhtar/workspaces/user/cpp-challenge/solution.h
+iostream
+-
+fstream
+-
+vector
+-
+sstream
+-
+string
+-
+iomanip
+-
+
+/home/ahmed.mokhtar/workspaces/user/cpp-challenge/test.cpp
+gtest/gtest.h
+-
+solution.h
+/home/ahmed.mokhtar/workspaces/user/cpp-challenge/solution.h
+iostream
+-
+string
+-
+
